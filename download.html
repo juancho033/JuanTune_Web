@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descarga JuanTune - Reproductor de MP3 gratuito, open-source y ligero para Windows 10/11.">
+    <title>Descargar JuanTune</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/download.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">Juan<span>Tune</span></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-back-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                    Inicio
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="download-hero">
+            <div class="download-glow"></div>
+            <div class="container download-hero-content">
+                <div class="tag">v1.0.0</div>
+                <h1>Descargar <span>JuanTune</span></h1>
+                <p class="download-hero-desc">
+                    Elige tu version y plataforma. Totalmente gratuito y de codigo abierto.
+                </p>
+            </div>
+        </section>
+
+        <section class="version-select">
+            <div class="container">
+                <div class="version-tabs" id="version-tabs">
+                    <button class="version-tab active" data-version="1.0.0">v1.0.0</button>
+                    <button class="version-tab disabled" data-version="1.1.0" disabled>v1.1.0</button>
+                    <button class="version-tab disabled" data-version="1.2.0" disabled>v1.2.0</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="platforms">
+            <div class="container">
+                <div class="platforms-grid">
+
+                    <div class="platform-card active">
+                        <div class="platform-header">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            <div>
+                                <h3>Windows 10 / 11</h3>
+                                <span class="platform-badge">Disponible</span>
+                            </div>
+                        </div>
+                        <p class="platform-desc">Version estable para Windows 10 y 11. 64 bits.</p>
+                        <div class="platform-meta">
+                            <span class="platform-size">~100 MB</span>
+                            <span class="platform-arch">x64</span>
+                        </div>
+                        <a href="https://drive.google.com/uc?export=download&id=1_-IQw2UL4AsbxAZYWp8c9o5JoNOeihp7" class="btn btn-primary platform-btn" download>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            Descargar v1.0.0
+                        </a>
+                    </div>
+
+                    <div class="platform-card coming-soon">
+                        <div class="platform-header">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            <div>
+                                <h3>Windows 7</h3>
+                                <span class="platform-badge badge-soon">Proximamente</span>
+                            </div>
+                        </div>
+                        <p class="platform-desc">Soporte para Windows 7 esta en desarrollo.</p>
+                        <div class="platform-meta">
+                            <span class="platform-size">--</span>
+                            <span class="platform-arch">x86 / x64</span>
+                        </div>
+                        <button class="btn btn-disabled platform-btn" disabled>Proximamente</button>
+                    </div>
+
+                    <div class="platform-card coming-soon">
+                        <div class="platform-header">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6"/><path d="M12 19h8"/></svg>
+                            <div>
+                                <h3>Linux</h3>
+                                <span class="platform-badge badge-soon">Proximamente</span>
+                            </div>
+                        </div>
+                        <p class="platform-desc">Paquetes .deb, .rpm y AppImage proximamente.</p>
+                        <div class="platform-meta">
+                            <span class="platform-size">--</span>
+                            <span class="platform-arch">x64 / ARM</span>
+                        </div>
+                        <button class="btn btn-disabled platform-btn" disabled>Proximamente</button>
+                    </div>
+
+                    <div class="platform-card coming-soon">
+                        <div class="platform-header">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
+                            <div>
+                                <h3>Android</h3>
+                                <span class="platform-badge badge-soon">Proximamente</span>
+                            </div>
+                        </div>
+                        <p class="platform-desc">App nativa para Android. En desarrollo.</p>
+                        <div class="platform-meta">
+                            <span class="platform-size">--</span>
+                            <span class="platform-arch">ARM64</span>
+                        </div>
+                        <button class="btn btn-disabled platform-btn" disabled>Proximamente</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="download-info">
+            <div class="container">
+                <div class="info-cards">
+                    <div class="info-card">
+                        <h4>Requiere</h4>
+                        <ul>
+                            <li>Windows 10 / 11 (64 bits)</li>
+                            <li>4 GB de RAM</li>
+                            <li>100 MB de espacio en disco</li>
+                            <li>Tarjeta de sonido</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h4>Formatos Soportados</h4>
+                        <ul>
+                            <li>MP3</li>
+                            <li>FLAC</li>
+                            <li>OGG</li>
+                            <li>WAV</li>
+                            <li>AAC</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h4>Codigo Fuente</h4>
+                        <ul>
+                            <li><a href="https://github.com/juancho033/JUANTUNE" target="_blank">GitHub - JuanTune</a></li>
+                            <li>Licencia MIT</li>
+                            <li>Python / CustomTkinter</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 JuanTune. Open source bajo <a href="#">licencia MIT</a>. <a href="index.html">Volver al inicio</a></p>
+        </div>
+    </footer>
+
+    <script src="js/download.js"></script>
+</body>
+</html>
