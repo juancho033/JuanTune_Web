@@ -13,6 +13,3 @@ build/
 # OS
 Thumbs.db
 .DS_Store
-
-# Music (user must provide their own)
-assets/music/*.mp3

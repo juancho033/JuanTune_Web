@@ -41,7 +41,7 @@
             preloaded: true
         },
         {
-            name: 'On & On',
+            name: 'Unknown Brain - On & On (feat. Rival)',
             url: 'assets/music/onandon.mp3',
             duration: 0,
             preloaded: true
