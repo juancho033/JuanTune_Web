@@ -821,6 +821,26 @@ a {
     flex-shrink: 0;
 }
 
+.song-delete {
+    display: none;
+    flex-shrink: 0;
+    cursor: pointer;
+    color: #94A3B8;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.15s;
+    line-height: 0;
+}
+
+.song-item:hover .song-delete {
+    display: inline-flex;
+}
+
+.song-delete:hover {
+    color: #EF4444;
+    background: rgba(239, 68, 68, 0.1);
+}
+
 .song-missing {
     opacity: 0.5;
 }

@@ -171,6 +171,19 @@
             var durText = s.duration > 0 ? formatTime(s.duration) : '--:--';
             btn.innerHTML = '<span class="song-name">' + escapeHtml(s.name) + '</span><span class="song-duration">' + durText + '</span>';
 
+            if (!s.preloaded) {
+                var delBtn = document.createElement('span');
+                delBtn.className = 'song-delete';
+                delBtn.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>';
+                (function (idx) {
+                    delBtn.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                        deleteSong(idx);
+                    });
+                })(i);
+                btn.appendChild(delBtn);
+            }
+
             btn.addEventListener('click', (function (idx) { return function () { onSongClick(idx); }; })(i));
             songList.appendChild(btn);
         }
@@ -178,6 +191,48 @@
 
     function onSongClick(index) {
         selectSong(index, isPlaying);
+    }
+
+    function deleteSong(index) {
+        var song = songs[index];
+        if (song.preloaded) return;
+
+        if (song.url && song.url.startsWith('blob:')) {
+            URL.revokeObjectURL(song.url);
+        }
+        if (song.dbId != null) {
+            deleteSongFromDB(song.dbId);
+        }
+
+        songs.splice(index, 1);
+
+        if (songs.length === 0) {
+            currentIndex = -1;
+            selectedIndex = -1;
+            audio.src = '';
+            audio.load();
+            playerTitle.textContent = 'Ninguna cancion seleccionada';
+            playerSubtitle.textContent = 'Importa un archivo MP3 para comenzar';
+            playerArt.classList.remove('has-song');
+            isPlaying = false;
+            playIcon.style.display = '';
+            pauseIcon.style.display = 'none';
+            progressBar.value = 0;
+            timeCurrent.textContent = '0:00';
+            timeTotal.textContent = '0:00';
+            renderPlaylist();
+            return;
+        }
+
+        if (index === currentIndex) {
+            var newIdx = index < songs.length ? index : songs.length - 1;
+            selectSong(newIdx, false);
+        } else if (index < currentIndex) {
+            currentIndex--;
+            renderPlaylist();
+        } else {
+            renderPlaylist();
+        }
     }
 
     function selectSong(index, autoPlay) {
